@@ -7,10 +7,12 @@ const blue = document.querySelector(".blue");
 const red = document.querySelector(".red");
 const yellow = document.querySelector(".yellow");
 const green = document.querySelector(".green");
+const black = document.querySelector(".black");
+const pink = document.querySelector(".pink");
 
 //cria ordem aleatoria de cores
 let shuffleOrder = () => {
-  let colorOrder = Math.floor(Math.random() * 4);
+  let colorOrder = Math.floor(Math.random() * 6);
   order[order.length] = colorOrder;
   clickedOrder = [];
 
@@ -58,6 +60,8 @@ let createElementColor = (color) => {
   if (color == 1) return red;
   if (color == 2) return yellow;
   if (color == 3) return blue;
+  if (color == 4) return black;
+  if (color == 5) return pink;
 };
 //função para proximo nivel do jogo
 let nextLevel = () => {
@@ -89,4 +93,6 @@ green.onclick = () => click(0);
 red.onclick = () => click(1);
 yellow.onclick = () => click(2);
 blue.onclick = () => click(3);
+black.onclick = () => click(4);
+pink.onclick = () => click(5);
 playGame();
