@@ -3,7 +3,13 @@ body {
     background-color: rgb(139, 249, 253);
     padding: 0;
 }
-
+.title{
+    font-size:40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .main-game {
     height: 100vh;
     width: 100vw;
@@ -49,5 +55,5 @@ body {
 }
 
 .selected {
-    opacity: 0.8;
+    opacity: 0.2;
 }

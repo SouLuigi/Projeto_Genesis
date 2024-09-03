@@ -24,7 +24,7 @@ let lightColor = (Element, number) => {
   let time = number * 500;
   setTimeout(() => {
     Element.classList.add("selected");
-  }, tempo - 250);
+  }, time - 250);
   setTimeout(() => {
     Element.classList.remove("selected");
   }, time);
