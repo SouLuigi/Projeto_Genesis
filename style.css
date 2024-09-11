@@ -1,24 +1,59 @@
 body {
     margin: 0;
-    background-color: rgb(139, 249, 253);
     padding: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6DCAC;
+    height: 100vh;
+    width: 100vw;
 }
-.title{
-    font-size:40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+.genesis h1 {
+    font-size: 100px;
+    margin-bottom: 20;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #01204E;
+}
+
+.main-game {
+    height: 50vh;
+    width: 40vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #FEAE6F;
 }
-.main-game {
+
+.medio-game {
     height: 100vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #F6DCAC;
 }
 
-.genius {
+button  {
+    margin-bottom: 10px;
+    width: 300px;
+    height: 80px;
+    border-radius: 90px;
+    background-color: #028391;
+    color: #01204E;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 00;
+    font-size: 30px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #59deeb;
+}
+.medio {
     display: grid;
     grid-template-areas: "verde vermelho rosa" "amarelo azul preto";
     grid-gap: 7px;
@@ -28,37 +63,70 @@ body {
     width: 700px;
     height: 700px;
     max-width: 700px;
-    max-height: 700px; 
+    max-height: 700px;
+}
+.level-up{
+    height: 5vh;
+    width: 10vw;
+    display: flex;
+    border-radius: 90px;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEAE6F;
+    font-size: 50;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+.score-board {
+    height: 5vh;
+    width: 10vw;
+    display: flex;
+    border-radius: 90px;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEAE6F;
+    font-size: 50;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+.red2 {
+    grid-area: vermelho;
+    background-color: #DD5746;
 }
 
-.red {
-    grid-area: vermelho;
-    background-color: rgb(187, 2, 2);
-}
-.green {
+.green2 {
     grid-area: verde;
-    background-color: green;
+    background-color: #1A4D2E;
     border-top-left-radius: 20%;
 }
-.pink {
+
+.pink2 {
     grid-area: rosa;
-    background-color:rgb(255, 0, 179);
+    background-color: #EE99C2;
     border-top-right-radius: 20%;
 }
-.yellow {
+
+.yellow2 {
     grid-area: amarelo;
-    background-color: rgb(196, 196, 0);
+    background-color: #FCDE70;
     border-bottom-left-radius: 20%;
 }
-.blue {
+
+.blue2 {
     grid-area: azul;
-    background-color: rgb(0, 71, 153);
+    background-color: #295F98;
 }
-.black {
+
+.black2 {
     grid-area: preto;
-    background-color: rgb(0, 0, 0);
+    background-color: #322C2B;
     border-bottom-right-radius: 20%;
 }
+
 .selected {
     opacity: 0.2;
+}
+
+@media screen and (max-widht: 400px) {
+    
 }
