@@ -9,7 +9,7 @@ body {
     width: 100vw;
 }
 
-.genesis h1 {
+.genesisMenu h1 {
     font-size: 100px;
     margin-bottom: 20;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -26,7 +26,7 @@ body {
     background-color: #FEAE6F;
 }
 
-.medio-game {
+.genesis-game {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -40,6 +40,7 @@ button  {
     margin-bottom: 10px;
     width: 300px;
     height: 80px;
+    border: none;
     border-radius: 90px;
     background-color: #028391;
     color: #01204E;
@@ -48,12 +49,12 @@ button  {
     font-weight: 00;
     font-size: 30px;
     transition: background-color 0.2s ease;
-    cursor: pointer;
+    cursor:pointer;
 }
 button:hover {
     background-color: #59deeb;
 }
-.medio {
+.genesis {
     display: grid;
     grid-template-areas: "verde vermelho rosa" "amarelo azul preto";
     grid-gap: 7px;
@@ -64,6 +65,7 @@ button:hover {
     height: 700px;
     max-width: 700px;
     max-height: 700px;
+    cursor: pointer;
 }
 .level-up{
     height: 5vh;
@@ -89,44 +91,109 @@ button:hover {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom: 20px;
 }
-.red2 {
+/* O modal (fundo) */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica no topo da página */
+    z-index: 1; /* Fica acima do conteúdo da página */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Adiciona rolagem se necessário */
+    background-color: rgb(0,0,0); /* Cor de fundo preta */
+    background-color: rgba(0,0,0,0.4); /* Preto com opacidade */
+}
+
+/* O conteúdo do modal */
+.modal-content {
+    display: flex;
+    background-color: #FEAE6F;
+    margin: 15% auto; /* Centraliza o modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;  
+    max-width: 500px;
+}
+.msg{
+    color: #01204E;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 30px;
+}
+
+/* O botão de fechar */
+.close {
+    color: #01204E;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color:  #59deeb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo do botão Reiniciar */
+#restartGame {
+    margin-bottom: 10px;
+    width: 200px;
+    height: 70px;
+    border: none;
+    border-radius: 90px;
+    background-color: #028391;
+    color: #01204E;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 00;
+    font-size: 30px;
+    transition: background-color 0.2s ease;
+    cursor:pointer;
+}
+button:hover {
+    background-color: #59deeb;
+}
+
+
+#restartGame:hover {
+    background-color: #59deeb;
+}
+.red {
     grid-area: vermelho;
     background-color: #DD5746;
 }
 
-.green2 {
+.green {
     grid-area: verde;
     background-color: #1A4D2E;
     border-top-left-radius: 20%;
 }
 
-.pink2 {
+.pink {
     grid-area: rosa;
     background-color: #EE99C2;
     border-top-right-radius: 20%;
 }
 
-.yellow2 {
+.yellow {
     grid-area: amarelo;
     background-color: #FCDE70;
     border-bottom-left-radius: 20%;
 }
 
-.blue2 {
+.blue {
     grid-area: azul;
     background-color: #295F98;
 }
 
-.black2 {
+.black {
     grid-area: preto;
     background-color: #322C2B;
     border-bottom-right-radius: 20%;
 }
 
 .selected {
+    transition: opacity 0.3s ease ;
     opacity: 0.2;
-}
-
-@media screen and (max-widht: 400px) {
-    
-}
+} 
